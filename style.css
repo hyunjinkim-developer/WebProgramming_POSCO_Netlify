@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+body {
+    /* 스크롤 없애기 위해 */
+    overflow: hidden;
+}
+
+
+/* header */
+header {
+    height: 100px;
+    background-color: rgb(244, 244, 173);
+    /* 메뉴 가로 정렬 */
+    display: flex;
+    /* flower, menu, sns 사이 벌려줌 */
+    justify-content: space-between;
+    /* 세로에 대해서 가운데 정렬 */
+    align-items: center;
+    padding: 2rem;
+
+    /* header가 main 위에 올라오게 */
+    /* z-index, position이 static이 아니어야 사용 가능 */
+    position: relative;
+    z-index: 1;
+}
+
+/* logo */
+header h1 {
+
+}
+
+header h1 a {
+    color: #000;
+}
+
+/* header: menu */
+header #menu {
+    display: flex;
+}
+
+header #menu li {
+    margin: 0 1rem;
+}
+
+header #menu li a {
+    /* a 태그는 상속 안됨 */
+    color: navy;
+}
+
+/* header: sns */
+header .sns {
+    display: flex;
+}
+
+header .sns li {
+    margin: 0 0.5vw;
+    /* i 크기 바꾸기 위해*/
+    font-size: 36px;
+}
+
+header .sns li a {
+}
+
+header .sns li a i {
+
+}
+
+/* main */
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    /* body는 height가 없기 때문에 %사용 불가 */
+    height: 100vh;
+}
+
+main video {
+    width: 100%;
+    height: 100%;
+    /* background-size: cover와 유사 */
+    object-fit: cover;
+}
+
+main .text {
+    /* .text의 기준이 main이 됨 */
+    position: absolute;
+    left: 6vw;
+    top: 40%;
+}
+
+main .text p {
+    font-size: 4vw;
+}
+
+main .text p ul {
+    display: flex;
+    /* margin-right: 18px;????? */
+}
+
+main .text ul li {
+    margin-right: 10px;
+}
+
+main .text ul li a {
+}
+
+/* footer */
+footer {
+    /* 기준은 viewport */
+    position: absolute;
+    width: 100%;
+    bottom: 3vh;
+    /* width: 100%해서 그 크기에 대해 글씨 가운데 정렬 */
+    text-align: center;
+    letter-spacing: 2px;
+}
